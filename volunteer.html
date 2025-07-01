@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HopeLink - Volunteer Signup</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts - Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f0f4f8; /* Light gray background */
+        }
+        .form-input {
+            @apply w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-200;
+        }
+        .form-label {
+            @apply block text-gray-700 text-sm font-semibold mb-2;
+        }
+    </style>
+</head>
+<body class="text-gray-800">
+
+    <!-- Header and Navigation -->
+    <header class="bg-white shadow-md py-4 px-6 md:px-12">
+        <nav class="container mx-auto flex flex-col md:flex-row justify-between items-center">
+            <a href="index.html" class="text-2xl font-bold text-blue-600 mb-4 md:mb-0">HopeLink</a>
+            <ul class="flex flex-col md:flex-row space-y-3 md:space-y-0 md:space-x-8">
+                <li><a id="nav-awareness" href="index.html" class="text-gray-700 hover:text-blue-600 font-semibold transition duration-300">Awareness</a></li>
+                <li><a id="nav-volunteer" href="volunteer.html" class="text-blue-600 font-semibold transition duration-300">Volunteer</a></li>
+                <li><a id="nav-donate" href="#" class="bg-blue-600 text-white px-6 py-2 rounded-full hover:bg-blue-700 transition duration-300 shadow-lg">Donate Now</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Volunteer Signup Section -->
+    <section class="py-16 md:py-24">
+        <div class="container mx-auto px-6 max-w-3xl">
+            <div class="bg-white p-8 md:p-12 rounded-xl shadow-lg">
+                <h2 class="text-3xl md:text-4xl font-bold text-blue-700 mb-8 text-center">Become a HopeLink Volunteer</h2>
+                <p class="text-lg text-gray-600 mb-8 text-center">
+                    Your time and skills are invaluable. Join our team and help us make a tangible difference in communities worldwide.
+                </p>
+
+                <form id="volunteer-form" class="space-y-6">
+                    <div>
+                        <label for="full-name" class="form-label">Full Name</label>
+                        <input type="text" id="full-name" name="fullName" class="form-input" placeholder="John Doe" required>
+                    </div>
+                    <div>
+                        <label for="email" class="form-label">Email Address</label>
+                        <input type="email" id="email" name="email" class="form-input" placeholder="john.doe@example.com" required>
+                    </div>
+                    <div>
+                        <label for="phone" class="form-label">Phone Number (Optional)</label>
+                        <input type="tel" id="phone" name="phone" class="form-input" placeholder="(123) 456-7890">
+                    </div>
+                    <div>
+                        <label for="availability" class="form-label">Availability</label>
+                        <select id="availability" name="availability" class="form-input" required>
+                            <option value="">Select your availability</option>
+                            <option value="weekly">Weekly</option>
+                            <option value="bi-weekly">Bi-weekly</option>
+                            <option value="monthly">Monthly</option>
+                            <option value="event-based">Event-based</option>
+                            <option value="flexible">Flexible</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="skills" class="form-label">Skills/Areas of Interest (e.g., teaching, marketing, IT, healthcare)</label>
+                        <textarea id="skills" name="skills" rows="4" class="form-input" placeholder="Tell us about your skills and how you'd like to contribute..."></textarea>
+                    </div>
+                    <div>
+                        <label for="message" class="form-label">Anything else you'd like us to know?</label>
+                        <textarea id="message" name="message" rows="3" class="form-input" placeholder="Optional message..."></textarea>
+                    </div>
+
+                    <div class="text-center">
+                        <button id="submit-volunteer-btn" type="submit" class="bg-blue-600 text-white px-8 py-3 rounded-full text-lg font-semibold hover:bg-blue-700 transition duration-300 shadow-xl">
+                            Submit Application
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8 mt-12">
+        <div class="container mx-auto px-6 text-center">
+            <p>&copy; 2025 HopeLink. All rights reserved.</p>
+            <div class="flex justify-center space-x-6 mt-4">
+                <a href="#" class="text-gray-400 hover:text-white transition duration-300">Privacy Policy</a>
+                <a href="#" class="text-gray-400 hover:text-white transition duration-300">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Simple JavaScript for form submission simulation
+        document.getElementById('volunteer-form').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent actual form submission
+
+            // Get form data (for demonstration purposes)
+            const fullName = document.getElementById('full-name').value;
+            const email = document.getElementById('email').value;
+            const availability = document.getElementById('availability').value;
+
+            // Simulate a successful submission
+            alert(`Thank you, ${fullName}! Your volunteer application has been received. We will contact you at ${email} regarding your ${availability} availability.`);
+
+            // Optionally, clear the form or redirect
+            this.reset(); // Clears the form fields
+            // window.location.href = 'index.html'; // Redirect to home page
+        });
+
+        // Simple JavaScript for navigation button click simulation (no actual donation logic)
+        document.getElementById('nav-donate').addEventListener('click', function(event) {
+            event.preventDefault(); // Prevent default link behavior
+            // Simulate a donation process, then redirect to thank you page
+            alert('Simulating a donation... redirecting to Thank You page!');
+            window.location.href = 'thankyou.html';
+        });
+    </script>
+</body>
+</html>
