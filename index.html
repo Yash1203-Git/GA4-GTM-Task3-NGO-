@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HopeLink - Business Simulation & NGO Platform</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts - Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f0f4f8; /* Light gray background */
+        }
+        .hero-section {
+            background-image: url('https://placehold.co/1200x600/60a5fa/ffffff?text=Helping+Hands+Making+a+Difference'); /* Placeholder image for hero */
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            z-index: 1;
+        }
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5); /* Dark overlay */
+            z-index: -1;
+        }
+    </style>
+</head>
+<body class="text-gray-800">
+
+    <!-- Header and Navigation -->
+    <header class="bg-white shadow-md py-4 px-6 md:px-12">
+        <nav class="container mx-auto flex flex-col md:flex-row justify-between items-center">
+            <a href="index.html" class="text-2xl font-bold text-blue-600 mb-4 md:mb-0">HopeLink</a>
+            <ul class="flex flex-col md:flex-row space-y-3 md:space-y-0 md:space-x-8">
+                <li><a id="nav-awareness" href="index.html" class="text-gray-700 hover:text-blue-600 font-semibold transition duration-300">Awareness</a></li>
+                <li><a id="nav-volunteer" href="volunteer.html" class="text-gray-700 hover:text-blue-600 font-semibold transition duration-300">Volunteer</a></li>
+                <li><a id="nav-donate" href="#" class="bg-blue-600 text-white px-6 py-2 rounded-full hover:bg-blue-700 transition duration-300 shadow-lg">Donate Now</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section (Awareness Page Main Content) -->
+    <section class="hero-section text-white py-20 md:py-32 text-center rounded-b-lg overflow-hidden">
+        <div class="container mx-auto px-6">
+            <h1 class="text-4xl md:text-6xl font-extrabold mb-6 leading-tight">Empowering Change Through HopeLink</h1>
+            <p class="text-lg md:text-xl mb-10 max-w-3xl mx-auto">
+                Join our business simulation to understand the impact of your contributions. Every action, every donation, fuels real-world change.
+            </p>
+            <a id="hero-learn-more-btn" href="#about-us" class="bg-white text-blue-600 px-8 py-3 rounded-full text-lg font-semibold hover:bg-gray-100 transition duration-300 shadow-xl">Learn More</a>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about-us" class="py-16 md:py-24 bg-white rounded-lg shadow-lg mx-4 md:mx-auto max-w-6xl -mt-16 relative z-10 p-6 md:p-12">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold text-blue-700 mb-8">Our Mission & Vision</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+                <div class="text-left">
+                    <h3 class="text-2xl font-semibold text-gray-800 mb-4">Mission</h3>
+                    <p class="text-lg text-gray-600 leading-relaxed">
+                        HopeLink is dedicated to creating sustainable solutions for communities in need. Through innovative programs focused on education, health, and environmental sustainability, we empower individuals to build brighter futures. Our business simulation allows you to see how your support directly translates into tangible outcomes.
+                    </p>
+                </div>
+                <div class="text-left">
+                    <h3 class="text-2xl font-semibold text-gray-800 mb-4">Vision</h3>
+                    <p class="text-lg text-gray-600 leading-relaxed">
+                        We envision a world where every person has access to the resources and opportunities necessary to thrive. By fostering a global community of compassionate individuals and strategic partners, we aim to eradicate poverty, promote equality, and protect our planet for future generations.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Impact Areas Section -->
+    <section class="py-16 md:py-24 bg-blue-50">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold text-blue-700 mb-12">Our Key Impact Areas</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Impact Card 1 -->
+                <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition duration-300">
+                    <img src="https://placehold.co/100x100/3b82f6/ffffff?text=Edu" alt="Education Icon" class="mx-auto mb-6 rounded-full">
+                    <h3 class="text-2xl font-semibold text-gray-800 mb-4">Education for All</h3>
+                    <p class="text-gray-600">
+                        Providing access to quality education, scholarships, and learning resources for underprivileged children and adults.
+                    </p>
+                </div>
+                <!-- Impact Card 2 -->
+                <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition duration-300">
+                    <img src="https://placehold.co/100x100/3b82f6/ffffff?text=Health" alt="Health Icon" class="mx-auto mb-6 rounded-full">
+                    <h3 class="text-2xl font-semibold text-gray-800 mb-4">Community Health</h3>
+                    <p class="text-gray-600">
+                        Supporting health clinics, medical camps, and awareness programs to improve public health outcomes.
+                    </p>
+                </div>
+                <!-- Impact Card 3 -->
+                <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition duration-300">
+                    <img src="https://placehold.co/100x100/3b82f6/ffffff?text=Env" alt="Environment Icon" class="mx-auto mb-6 rounded-full">
+                    <h3 class="text-2xl font-semibold text-gray-800 mb-4">Environmental Protection</h3>
+                    <p class="text-gray-600">
+                        Initiatives focused on reforestation, waste management, and promoting sustainable living practices.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action Section -->
+    <section class="bg-blue-600 text-white py-16 md:py-20 text-center rounded-t-lg">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6">Ready to Make a Difference?</h2>
+            <p class="text-lg md:text-xl mb-10 max-w-2xl mx-auto">
+                Your support, whether through volunteering your time or making a donation, creates a ripple effect of positive change.
+            </p>
+            <div class="flex flex-col md:flex-row justify-center space-y-4 md:space-y-0 md:space-x-6">
+                <a id="cta-volunteer-btn" href="volunteer.html" class="bg-white text-blue-600 px-8 py-3 rounded-full text-lg font-semibold hover:bg-gray-100 transition duration-300 shadow-xl">Become a Volunteer</a>
+                <a id="cta-donate-btn" href="#" class="bg-green-500 text-white px-8 py-3 rounded-full text-lg font-semibold hover:bg-green-600 transition duration-300 shadow-xl">Simulate Donation</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-6 text-center">
+            <p>&copy; 2025 HopeLink. All rights reserved.</p>
+            <div class="flex justify-center space-x-6 mt-4">
+                <a href="#" class="text-gray-400 hover:text-white transition duration-300">Privacy Policy</a>
+                <a href="#" class="text-gray-400 hover:text-white transition duration-300">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Simple JavaScript for button click simulation (no actual donation logic)
+        document.getElementById('nav-donate').addEventListener('click', function(event) {
+            event.preventDefault(); // Prevent default link behavior
+            // Simulate a donation process, then redirect to thank you page
+            alert('Simulating a donation... redirecting to Thank You page!');
+            window.location.href = 'thankyou.html';
+        });
+
+        document.getElementById('cta-donate-btn').addEventListener('click', function(event) {
+            event.preventDefault(); // Prevent default link behavior
+            // Simulate a donation process, then redirect to thank you page
+            alert('Simulating a donation... redirecting to Thank You page!');
+            window.location.href = 'thankyou.html';
+        });
+    </script>
+</body>
+</html>
